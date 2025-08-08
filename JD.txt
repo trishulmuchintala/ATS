@@ -1,0 +1,49 @@
+JD: Software Engineer – Full Stack Developer (React, Node.js, Java, AWS)
+Job Title: Software Engineer – Full Stack
+Location: Remote
+Employment Type: Full-time
+
+Job Description
+We are looking for a full stack software engineer proficient in modern web development technologies and cloud-native architecture. You will work with React, Node.js, Java, and cloud platforms such as AWS and Azure to build and maintain scalable web applications.
+
+Responsibilities
+Develop frontend applications using React, TypeScript, HTML, and CSS
+
+Build backend services using Node.js, Express, or Java (Spring Boot)
+
+Design and integrate with REST APIs, GraphQL, and microservices
+
+Manage and interact with PostgreSQL, MySQL, MongoDB, and Redis
+
+Write unit and integration tests using Jest, Mocha, or PyTest
+
+Use Git, GitHub, and CI/CD tools like GitHub Actions, Jenkins, or Azure DevOps
+
+Deploy applications using Docker, Kubernetes, AWS Lambda, and Terraform
+
+Follow Agile methodology and use tools like Jira, Figma, and Storybook
+
+Requirements
+Experience in JavaScript, TypeScript, Python, GoLang, or Java
+
+Familiarity with cloud platforms: AWS, Azure, or GCP
+
+Comfortable with DevOps practices, containerization, and infrastructure as code
+
+Excellent communication and collaboration skills
+
+Strong problem-solving skills and attention to detail
+
+Nice to Have
+Experience with React, Node.js, GoLang, Spring Boot
+
+Worked on backend engineering, DevOps, frontend development, or cloud development
+
+Exposure to tools like Ansible, Prometheus, Cypress, RabbitMQ, Kafka, DynamoDB
+
+Why Join Us?
+Remote-first environment
+
+Collaborative and inclusive team culture
+
+Opportunity to work on large-scale, distributed systems

@@ -1,0 +1,19 @@
+Alice Johnson
+Email: alice.j@email.com
+Location: Austin, TX
+
+Professional Summary:
+Software Developer with 5 years of experience in JavaScript, React, and Node.js. Passionate about building scalable web applications and improving system performance.
+
+Skills:
+- JavaScript, React, Node.js, Express
+- MongoDB, PostgreSQL
+- Git, Docker, Jenkins
+
+Experience:
+Frontend Developer at DevWorks Inc. (2020–Present)
+- Built SPA using React and Redux
+- Optimized web performance by 35%
+
+Education:
+B.S. in Computer Science, University of Texas

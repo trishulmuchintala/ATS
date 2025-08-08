@@ -1,0 +1,17 @@
+Kevin Liu
+Email: kevin.l@email.com
+Location: San Diego, CA
+
+Summary:
+DevOps Engineer with 4 years in automating cloud deployments and infrastructure-as-code using Terraform and AWS.
+
+Skills:
+- AWS, Terraform, Ansible
+- Jenkins, GitHub Actions
+- Linux, Bash
+
+Experience:
+DevOps Engineer, ScaleUp Corp. (2020–Present)
+
+Education:
+B.S. in Software Engineering

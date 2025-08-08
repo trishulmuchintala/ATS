@@ -1,0 +1,17 @@
+Priya Patel
+Email: priya.patel@email.com
+Location: Seattle, WA
+
+Summary:
+Experienced Backend Developer with focus on RESTful APIs, GoLang, and PostgreSQL. Strong advocate for test-driven development and clean architecture.
+
+Skills:
+- GoLang, Python, SQL
+- Kubernetes, Prometheus
+- PostgreSQL, RabbitMQ
+
+Experience:
+Backend Engineer, FintechX (2021–Present)
+
+Education:
+M.S. in Computer Science, University of Washington

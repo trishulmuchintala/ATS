@@ -1,0 +1,17 @@
+Michael Smith
+Email: mike.smith@email.com
+Location: Remote
+
+Summary:
+Full Stack Engineer with 6+ years in cloud-based application development using .NET and Angular. Strong background in CI/CD, Azure, and microservices.
+
+Skills:
+- C#, ASP.NET, Angular
+- Azure DevOps, Docker
+- SQL Server, Redis
+
+Experience:
+Software Engineer at CloudOps Solutions (2018–Present)
+
+Education:
+B.Tech in Information Technology

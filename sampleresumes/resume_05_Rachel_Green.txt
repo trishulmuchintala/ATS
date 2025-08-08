@@ -1,0 +1,17 @@
+Rachel Green
+Email: rachel.g@email.com
+Location: Denver, CO
+
+Summary:
+Frontend Developer specializing in React, TypeScript, and UX design. Delivered responsive interfaces and improved accessibility.
+
+Skills:
+- React, TypeScript, HTML/CSS
+- Figma, Storybook
+- Cypress, Jest
+
+Experience:
+Frontend Developer, HealthTech Inc. (2019–Present)
+
+Education:
+B.A. in Human-Computer Interaction

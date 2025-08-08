@@ -1,0 +1,17 @@
+Anil Kumar
+Email: anil.k@email.com
+Location: Hyderabad, India
+
+Summary:
+Software Engineer with hands-on experience in Java, Spring Boot, and Kafka for building real-time enterprise applications.
+
+Skills:
+- Java, Spring Boot, Kafka
+- MySQL, MongoDB
+- Git, Jenkins, Docker
+
+Experience:
+Software Engineer, Infoserve Pvt. Ltd. (2020–Present)
+
+Education:
+B.Tech in Computer Science

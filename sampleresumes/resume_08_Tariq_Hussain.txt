@@ -1,0 +1,17 @@
+Tariq Hussain
+Email: tariq.h@email.com
+Location: London, UK
+
+Summary:
+Cloud-native application developer with deep expertise in AWS Lambda, DynamoDB, and serverless architecture.
+
+Skills:
+- AWS Lambda, DynamoDB, API Gateway
+- Python, JavaScript
+- CI/CD, CloudFormation
+
+Experience:
+Cloud Developer, SkyNet Tech (2019–Present)
+
+Education:
+MSc in Software Systems

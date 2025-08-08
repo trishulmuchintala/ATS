@@ -1,0 +1,17 @@
+Samantha Brown
+Email: sam.b@email.com
+Location: New York, NY
+
+Summary:
+Full Stack Developer with experience in MERN stack, GraphQL, and Agile methodologies.
+
+Skills:
+- MongoDB, Express, React, Node.js
+- GraphQL, REST APIs
+- Git, Jira, Scrum
+
+Experience:
+Full Stack Developer, StartupWorks (2021–Present)
+
+Education:
+B.S. in Computer Engineering

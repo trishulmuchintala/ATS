@@ -17,28 +17,71 @@ function scoreResume(jdKeywords, resumeText) {
     return { score: Math.round(score), matched };
 }
 
-document.getElementById('add-resume').onclick = function() {
-    const container = document.getElementById('resumes-container');
-    const textarea = document.createElement('textarea');
-    textarea.className = 'resume';
-    textarea.rows = 6;
-    textarea.placeholder = `Paste resume ${container.children.length + 1} here...`;
-    container.appendChild(textarea);
-};
+// Store uploaded resumes' text
+let uploadedResumes = [];
+
+// Handle file input change
+const fileInput = document.getElementById('resume-upload');
+fileInput.addEventListener('change', handleFiles);
+
+// Handle drag and drop
+const dropArea = document.getElementById('drop-area');
+dropArea.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropArea.classList.add('dragover');
+});
+dropArea.addEventListener('dragleave', (e) => {
+    e.preventDefault();
+    dropArea.classList.remove('dragover');
+});
+dropArea.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropArea.classList.remove('dragover');
+    handleFiles({ target: { files: e.dataTransfer.files } });
+});
+
+function handleFiles(e) {
+    const files = Array.from(e.target.files);
+    uploadedResumes = [];
+    let readCount = 0;
+    files.forEach(file => {
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+            uploadedResumes.push(ev.target.result);
+            readCount++;
+            if (readCount === files.length) {
+                dropArea.textContent = `${files.length} file(s) uploaded.`;
+            }
+        };
+        // Only read as text (for .txt, .docx, etc.)
+        reader.readAsText(file);
+    });
+}
+
+function extractCandidateName(resumeText) {
+    // Get the first non-empty line as the candidate name
+    const lines = resumeText.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+    return lines.length > 0 ? lines[0] : 'Unknown Candidate';
+}
 
 document.getElementById('score').onclick = function() {
     const jdText = document.getElementById('jd').value;
     const jdKeywords = Array.from(new Set(extractKeywords(jdText)));
-    const resumes = Array.from(document.getElementsByClassName('resume')).map(t => t.value);
+    let resumes = uploadedResumes;
+    if (resumes.length === 0) {
+        alert('Please upload at least one resume.');
+        return;
+    }
     let results = resumes.map((resume, idx) => {
         const { score, matched } = scoreResume(jdKeywords, resume);
-        return { idx: idx + 1, score, matched };
+        const name = extractCandidateName(resume);
+        return { idx: idx + 1, score, matched, name };
     });
     results.sort((a, b) => b.score - a.score);
     const top5 = results.slice(0, 5);
     let html = '<h2>Top 5 Candidates</h2><ol>';
     top5.forEach(r => {
-        html += `<li><strong>Resume ${r.idx}</strong>: Score <b>${r.score}%</b><br>Matched keywords: <span style="color:green">${r.matched.join(', ')}</span></li>`;
+        html += `<li><strong>${r.name}</strong>: Score <b>${r.score}%</b><br>Matched keywords: <span style="color:green">${r.matched.join(', ')}</span></li>`;
     });
     html += '</ol>';
     document.getElementById('results').innerHTML = html;
