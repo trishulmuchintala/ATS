@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATS Resume Screening</title>
+    <title>ATS Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -11,22 +11,191 @@
     <header class="main-header">
         <div class="branding">
             <i class="fas fa-briefcase"></i>
-            <span>ATS Resume Screening</span>
+            <span>ATS Dashboard</span>
         </div>
+        <nav class="top-menu">
+            <ul>
+                <li><i class="fas fa-bell"></i></li>
+                <li><i class="fas fa-user-circle"></i></li>
+                <li><i class="fas fa-cog"></i></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <div class="card">
-            <h2><i class="fas fa-file-alt"></i> Job Description</h2>
-            <textarea id="jd" rows="6" placeholder="Paste the job description here..."></textarea>
-            <h2><i class="fas fa-upload"></i> Upload Resumes</h2>
-            <div class="upload-section">
-                <input type="file" id="resume-upload" multiple accept=".pdf,.doc,.docx,.txt">
-                <div id="drop-area"><i class="fas fa-cloud-upload-alt"></i> Drag & Drop resumes here</div>
+    <div class="layout">
+        <aside class="sidebar">
+            <ul>
+                <li class="active" id="menu-dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+                <li id="menu-ats"><i class="fas fa-robot"></i> ATS</li>
+                <li><i class="fas fa-file-alt"></i> Job Listings</li>
+                <li><i class="fas fa-users"></i> Candidates</li>
+                <li><i class="fas fa-filter"></i> Funnel Metrics</li>
+                <li><i class="fas fa-chart-bar"></i> Analytics</li>
+                <li><i class="fas fa-cogs"></i> Settings</li>
+            </ul>
+        </aside>
+        <main>
+            <div id="dashboard-section">
+                <div class="dashboard-metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-users"></i></div>
+                        <div class="metric-title">Total Candidates</div>
+                        <div class="metric-value">1,245</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="metric-title">Open Positions</div>
+                        <div class="metric-value">18</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-user-check"></i></div>
+                        <div class="metric-title">Hired This Month</div>
+                        <div class="metric-value">7</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-hourglass-half"></i></div>
+                        <div class="metric-title">Avg. Time to Hire</div>
+                        <div class="metric-value">22 days</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-handshake"></i></div>
+                        <div class="metric-title">Offer Acceptance Rate</div>
+                        <div class="metric-value">81%</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-times-circle"></i></div>
+                        <div class="metric-title">Rejection Rate</div>
+                        <div class="metric-value">14%</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-venus-mars"></i></div>
+                        <div class="metric-title">Diversity Ratio</div>
+                        <div class="metric-value">48% F / 52% M</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="metric-title">Interviews Scheduled</div>
+                        <div class="metric-value">15</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-user-plus"></i></div>
+                        <div class="metric-title">New Candidates (7d)</div>
+                        <div class="metric-value">32</div>
+                    </div>
+                </div>
+                <div class="dashboard-info-row">
+                    <div class="dashboard-info-card">
+                        <h2><i class="fas fa-chart-pie"></i> Top Candidate Sources</h2>
+                        <ul class="top-sources-list">
+                            <li><i class="fas fa-globe"></i> LinkedIn <span>42%</span></li>
+                            <li><i class="fas fa-user-friends"></i> Employee Referral <span>28%</span></li>
+                            <li><i class="fas fa-briefcase"></i> Job Portal <span>19%</span></li>
+                            <li><i class="fas fa-university"></i> Campus <span>11%</span></li>
+                        </ul>
+                    </div>
+                    <div class="dashboard-info-card">
+                        <h2><i class="fas fa-calendar-alt"></i> Upcoming Interviews</h2>
+                        <ul class="interview-list">
+                            <li><b>Priya Patel</b> - Engineering (Aug 9, 10:00 AM)</li>
+                            <li><b>Rachel Green</b> - Marketing (Aug 10, 2:00 PM)</li>
+                            <li><b>Michael Smith</b> - Sales (Aug 11, 11:30 AM)</li>
+                        </ul>
+                    </div>
+                    <div class="dashboard-info-card">
+                        <h2><i class="fas fa-user-plus"></i> Recent Hires</h2>
+                        <ul class="hires-list">
+                            <li><b>Samantha Brown</b> - Engineering</li>
+                            <li><b>Emma Clark</b> - Support</li>
+                            <li><b>Anil Kumar</b> - Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="funnel-section">
+                    <h2><i class="fas fa-filter"></i> Recruitment Funnel</h2>
+                    <div class="funnel-steps">
+                        <div class="funnel-step">
+                            <div class="funnel-step-label">Applied</div>
+                            <div class="funnel-step-count">1,245</div>
+                        </div>
+                        <div class="funnel-arrow"><i class="fas fa-arrow-right"></i></div>
+                        <div class="funnel-step">
+                            <div class="funnel-step-label">Screened</div>
+                            <div class="funnel-step-count">620</div>
+                        </div>
+                        <div class="funnel-arrow"><i class="fas fa-arrow-right"></i></div>
+                        <div class="funnel-step">
+                            <div class="funnel-step-label">Interviewed</div>
+                            <div class="funnel-step-count">210</div>
+                        </div>
+                        <div class="funnel-arrow"><i class="fas fa-arrow-right"></i></div>
+                        <div class="funnel-step">
+                            <div class="funnel-step-label">Offered</div>
+                            <div class="funnel-step-count">32</div>
+                        </div>
+                        <div class="funnel-arrow"><i class="fas fa-arrow-right"></i></div>
+                        <div class="funnel-step">
+                            <div class="funnel-step-label">Hired</div>
+                            <div class="funnel-step-count">7</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pipeline-section">
+                    <h2><i class="fas fa-stream"></i> Pipeline Overview</h2>
+                    <div class="pipeline-cards">
+                        <div class="pipeline-card">
+                            <div class="pipeline-icon"><i class="fas fa-laptop-code"></i></div>
+                            <div class="pipeline-title">Engineering</div>
+                            <div class="pipeline-value">8 Openings</div>
+                        </div>
+                        <div class="pipeline-card">
+                            <div class="pipeline-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="pipeline-title">Sales</div>
+                            <div class="pipeline-value">3 Openings</div>
+                        </div>
+                        <div class="pipeline-card">
+                            <div class="pipeline-icon"><i class="fas fa-bullhorn"></i></div>
+                            <div class="pipeline-title">Marketing</div>
+                            <div class="pipeline-value">2 Openings</div>
+                        </div>
+                        <div class="pipeline-card">
+                            <div class="pipeline-icon"><i class="fas fa-headset"></i></div>
+                            <div class="pipeline-title">Support</div>
+                            <div class="pipeline-value">5 Openings</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button id="score"><i class="fas fa-list-ol"></i> Screen and Rank Resumes</button>
-            <div id="results"></div>
-        </div>
-    </main>
+            <div id="ats-section" style="display:none;">
+                <div class="card">
+                    <h2><i class="fas fa-file-alt"></i> Job Description</h2>
+                    <textarea id="jd" rows="6" placeholder="Paste the job description here..."></textarea>
+                    <h2><i class="fas fa-upload"></i> Upload Resumes</h2>
+                    <div class="upload-section">
+                        <input type="file" id="resume-upload" multiple accept=".pdf,.doc,.docx,.txt">
+                        <div id="drop-area"><i class="fas fa-cloud-upload-alt"></i> Drag & Drop resumes here</div>
+                    </div>
+                    <button id="score"><i class="fas fa-list-ol"></i> Screen and Rank Resumes</button>
+                    <div id="results"></div>
+                </div>
+            </div>
+        </main>
+    </div>
     <script src="main.js"></script>
+    <script>
+    // Sidebar navigation logic
+    const dashboardSection = document.getElementById('dashboard-section');
+    const atsSection = document.getElementById('ats-section');
+    document.getElementById('menu-dashboard').onclick = function() {
+        dashboardSection.style.display = '';
+        atsSection.style.display = 'none';
+        document.getElementById('menu-dashboard').classList.add('active');
+        document.getElementById('menu-ats').classList.remove('active');
+    };
+    document.getElementById('menu-ats').onclick = function() {
+        dashboardSection.style.display = 'none';
+        atsSection.style.display = '';
+        document.getElementById('menu-dashboard').classList.remove('active');
+        document.getElementById('menu-ats').classList.add('active');
+    };
+    </script>
 </body>
 </html>
