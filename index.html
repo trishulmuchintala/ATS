@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Resume Scorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ATS Resume Scorer</h1>
+        <label for="jd">Job Description:</label>
+        <textarea id="jd" rows="6" placeholder="Paste the job description here..."></textarea>
+        <label for="resumes">Resumes (one per box):</label>
+        <div id="resumes-container">
+            <textarea class="resume" rows="6" placeholder="Paste resume 1 here..."></textarea>
+        </div>
+        <button id="add-resume">Add Another Resume</button>
+        <button id="score">Score Resumes</button>
+        <div id="results"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
